@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Quiz Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+
+        <div class="header">
+            <div>
+                <h1>CSE Quiz Challenge</h1>
+                <p>Test your Computer Science knowledge</p>
+            </div>
+            <div class="timer">
+                ⏱ <span id="time">60</span>s
+            </div>
+        </div>
+
+        <div class="progress-area">
+            <div class="progress-info">
+                <span>Question <span id="current">1</span> of <span id="total">10</span></span>
+                <span id="percentage">10%</span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+        </div>
+
+        <div id="quiz">
+
+            <div class="question-number">
+                Question 1
+            </div>
+
+            <h2 id="question">
+                What does CPU stand for?
+            </h2>
+
+            <div id="options" class="options"></div>
+
+        </div>
+
+        <div class="buttons">
+            <button id="nextBtn" onclick="nextQuestion()">
+                Next Question →
+            </button>
+        </div>
+
+        <div id="result" class="result hidden">
+            <div class="result-icon">🏆</div>
+            <h2>Quiz Completed!</h2>
+
+            <p>Your Score</p>
+
+            <div class="score">
+                <span id="score">0</span>/10
+            </div>
+
+            <p id="message"></p>
+
+            <button onclick="restartQuiz()" class="restart">
+                🔄 Try Again
+            </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
